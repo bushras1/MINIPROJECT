@@ -1,0 +1,218 @@
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+int list();
+void deposit();
+void withdraw();
+void transfer();
+void checkdetail();
+void last();
+
+int totalamount=1000,amount,amo,ta,totaldeposit=0,totalwithdrawn=0,totaltransferred=0;
+int ACC;
+char a[20];
+void main()
+{
+   
+    printf("\nEnter your name :");
+    scanf("%s",a);
+    printf("\nEnter your account number :");
+    scanf("%d",&ACC);
+    while(1)
+    {
+    
+    switch(list())
+    {
+        case 1:
+        deposit();
+        totaldeposit+=amount;
+        break;
+        case 2:
+        withdraw();
+        if(amo<=totalamount)
+        totalwithdrawn+=amo;
+        break;
+        case 3:
+        transfer();
+        if(ta<=totalamount)
+        totaltransferred+=ta;
+        break;
+        case 4:
+        checkdetail();
+        break;
+        case 5:
+        last();
+        getch();
+        exit(0);
+        default:
+        printf("\nInvalid choice");
+    }//end of switch
+    getch();
+    }//end of while
+    }
+int list()
+{
+    int n;
+    printf("\n 1. DEPOSIT AMOUNT:");
+    printf("\n 2. WITHDRAW AMOUNT :");
+    printf("\n 3. TRANSFER AMOUNT :");
+    printf("\n 4. VIEW ACCOUNT BALANCE :");
+    printf("\n 5. EXIT:");
+    printf("\n ENTER YOUR CHOICE :");
+    scanf("%d",&n);
+    return(n);
+}
+void deposit()
+{
+    printf("\nEnter the amount you want to deposit :");
+    scanf("%d",&amount);
+    totalamount+=amount;
+}
+void withdraw()
+{
+    printf("\nEnter the amount you want to withdraw :");
+    scanf("%d",&amo);
+    if(amo<=totalamount)
+    totalamount-=amo;
+    else
+    printf("\nWithdrawal of money is not possible");
+}
+void transfer()
+{
+    printf("\nEnter the amount you want to tranfer :");
+    scanf("%d",&ta);
+    if(ta<=totalamount)
+    totalamount-=ta;
+    else
+    printf("\nTransfer of money is not possible");
+}
+void checkdetail()
+{
+    printf("\nTotal amount = %d",totalamount);
+    printf("\nTotal amount deposited = %d",totaldeposit);
+    printf("\nTotal amount withdrawn = %d",totalwithdrawn);
+    printf("\nTotal amount transferred = %d",totaltransferred);
+}
+void last()
+{
+    printf("\n*******************************\n");
+    printf("\nYour name = %s",a);
+    printf("\nAccount Number = %d",ACC);
+    printf("\nTotal amount = %d",totalamount);
+    printf("\nTotal amount deposited = %d",totaldeposit);
+    printf("\nTotal amount withdrawn = %d",totalwithdrawn);
+    printf("\nTotal amount transferred = %d",totaltransferred);
+    printf("\n \n *****THANKYOU*****");
+}
+
+
+
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+int list();
+void deposit();
+void withdraw();
+void transfer();
+void checkdetail();
+void last();
+
+int totalamount=1000,amount,amo,ta,totaldeposit=0,totalwithdrawn=0,totaltransferred=0;
+int ACC;
+char a[20];
+void main()
+{
+   
+    printf("\nEnter your name :");
+    scanf("%s",a);
+    printf("\nEnter your account number :");
+    scanf("%d",&ACC);
+    while(1)
+    {
+    
+    switch(list())
+    {
+        case 1:
+        deposit();
+        totaldeposit+=amount;
+        break;
+        case 2:
+        withdraw();
+        if(amo<=totalamount)
+        totalwithdrawn+=amo;
+        break;
+        case 3:
+        transfer();
+        if(ta<=totalamount)
+        totaltransferred+=ta;
+        break;
+        case 4:
+        checkdetail();
+        break;
+        case 5:
+        last();
+        getch();
+        exit(0);
+        default:
+        printf("\nInvalid choice");
+    }//end of switch
+    getch();
+    }//end of while
+    }
+int list()
+{
+    int n;
+    printf("\n 1. DEPOSIT AMOUNT:");
+    printf("\n 2. WITHDRAW AMOUNT :");
+    printf("\n 3. TRANSFER AMOUNT :");
+    printf("\n 4. VIEW ACCOUNT BALANCE :");
+    printf("\n 5. EXIT:");
+    printf("\n ENTER YOUR CHOICE :");
+    scanf("%d",&n);
+    return(n);
+}
+void deposit()
+{
+    printf("\nEnter the amount you want to deposit :");
+    scanf("%d",&amount);
+    totalamount+=amount;
+}
+void withdraw()
+{
+    printf("\nEnter the amount you want to withdraw :");
+    scanf("%d",&amo);
+    if(amo<=totalamount)
+    totalamount-=amo;
+    else
+    printf("\nWithdrawal of money is not possible");
+}
+void transfer()
+{
+    printf("\nEnter the amount you want to tranfer :");
+    scanf("%d",&ta);
+    if(ta<=totalamount)
+    totalamount-=ta;
+    else
+    printf("\nTransfer of money is not possible");
+}
+void checkdetail()
+{
+    printf("\nTotal amount = %d",totalamount);
+    printf("\nTotal amount deposited = %d",totaldeposit);
+    printf("\nTotal amount withdrawn = %d",totalwithdrawn);
+    printf("\nTotal amount transferred = %d",totaltransferred);
+}
+void last()
+{
+    printf("\n*******************************\n");
+    printf("\nYour name = %s",a);
+    printf("\nAccount Number = %d",ACC);
+    printf("\nTotal amount = %d",totalamount);
+    printf("\nTotal amount deposited = %d",totaldeposit);
+    printf("\nTotal amount withdrawn = %d",totalwithdrawn);
+    printf("\nTotal amount transferred = %d",totaltransferred);
+    printf("\n \n *****THANKYOU*****");
+}
+
+
+
